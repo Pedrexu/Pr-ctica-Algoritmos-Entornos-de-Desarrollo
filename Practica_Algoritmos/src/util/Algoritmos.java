@@ -15,4 +15,14 @@ public abstract class Algoritmos {
         else
             return numero * factorial(numero - 1);
     }
+	
+	public static boolean primo(int numero) {
+        if (numero <= 1)
+            return false;
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0)
+                return false;
+        }
+        return true;
+    }
 }
